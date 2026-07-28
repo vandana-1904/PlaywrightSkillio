@@ -55,7 +55,7 @@ await page.getByRole('button',{ name: " Save "}).click();
 
 
 })
-test.only('to verify Recruitment',async({page})=> {
+test('to verify Recruitment',async({page})=> {
 await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
 await page.getByPlaceholder("Username").fill("Admin");
 await page.getByPlaceholder("Password").fill("admin123");
