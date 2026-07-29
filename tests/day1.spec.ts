@@ -55,7 +55,7 @@ await page.getByRole('button',{ name: " Save "}).click();
 
 
 })
-test.only('to verify Recruitment',async({page})=> {
+test('to verify Recruitment',async({page})=> {
 await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
 await page.getByPlaceholder("Username").fill("Admin");
 await page.getByPlaceholder("Password").fill("admin123");
@@ -73,7 +73,7 @@ await page.locator('.oxd-select-text-input').click();
 await page.locator('.oxd-select-dropdown').getByText('Software Engineer').click();
 await page.getByPlaceholder('Type here').nth(0).fill('van@gmail.com');
 await page.getByPlaceholder('Type here').nth(1).fill('8830930741');
-//await page.locator(".oxd-file-button").setInputFiles('C:\\PlaywrightDemo\\tests\\resume\\Vandana_Bhoyar_SDET4.4_Resume.pdf');
+await page.locator(".oxd-file-button").setInputFiles('C:\\PlaywrightDemo\\tests\\resume\\Vandana_Bhoyar_SDET4.4_Resume.pdf');
 //const filePath = "C:\\PlaywrightDemo\\tests\\resume\\Vandana_Bhoyar_SDET4.4_Resume.pdf";
 //await page.locator("input.oxd-file-input").setInputFiles(filePath);
 //console.log("Exists:", fs.existsSync(filePath));
